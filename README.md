@@ -18,12 +18,13 @@
 ## 环境要求
 
 - macOS，Python **3.10 或更新版本**，以及 [Homebrew](https://brew.sh)。
-- ATK YOGO 75 PRO，通过 **USB 数据线**连接并切换到有线模式。
+- ATK YOGO 75 PRO，通过 **USB 数据线或 2.4G 接收器**连接，并切换到对应档位。
 - 退出 ATK HUB、上游 yogo daemon 或其他占用键盘的控制程序。
 - Codex 联动需要这台 Mac 上有可读取的 `~/.codex/sessions` 本地会话文件。
 
-已在一台 Apple 芯片 Mac 和 YOGO 75 PRO USB 连接上验证运行。
-Intel Mac 尚未实机验证；不支持本面板通过蓝牙或 2.4G 接收器控制。
+已在一台 Apple 芯片 Mac 和 YOGO 75 PRO 上验证 USB 连接，以及 2.4G 握手和小屏推送回应。
+Intel Mac 尚未实机验证；不支持蓝牙控制小屏。
+面板自动选择有回应的连接；断线后自动重试。2.4G 动画最高约 5 帧/秒，以降低无线通信负担。
 
 ## 安装
 
@@ -92,7 +93,7 @@ YOGO_PYTHON="$(brew --prefix)/bin/python3" bash install.sh
 DYLD_LIBRARY_PATH="$(brew --prefix hidapi)/lib" .venv/bin/python -m unittest discover -v
 ```
 
-当前提供 26 项动画、输入验证、主任务事件跟随与启动器测试。测试不要求连接键盘。
+当前提供 31 项动画、输入验证、主任务事件跟随、连接与启动器测试。测试不要求连接键盘。
 发布整理中另提供启动器路径引用测试。软件仍为早期版本，浏览器跨版本兼容和
 不同键盘固件尚未充分验证；欢迎提供可复现问题。
 

@@ -6,7 +6,7 @@ import threading
 import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from yogo.device import YogoDisplay
+from connection import PanelDisplay
 from yogo.frame import Frame, parse_color
 from yogo.font import GLYPHS, lit_indices
 from yogo.daemon import RENDERERS, render_idle
@@ -75,7 +75,7 @@ class Controller:
         self.command=validate({'mode':'stop'})
         self.version=0
         self.closed=threading.Event()
-        self.state=dict(connected=False, battery=None, mode='stop', error='', pixels=[[0,0,0]]*36, version=0, theme='robot', brightness=.6)
+        self.state=dict(connected=False, transport=None, battery=None, mode='stop', error='', pixels=[[0,0,0]]*36, version=0, theme='robot', brightness=.6)
         self.thread=threading.Thread(target=self.run,daemon=True)
         self.thread.start()
 
@@ -105,10 +105,7 @@ class Controller:
                         with self.lock:self.codex_state=codex
                         self.codex_next=time.monotonic()+.5
                     if dev is None:
-                        devices=[d for d in YogoDisplay.discover() if not d.wireless]
-                        if not devices: raise RuntimeError('未检测到 USB 键盘，请接好数据线并切换到有线模式')
-                        dev=devices[0].open()
-                        dev.read_config()  # require an actual reply before marking connected
+                        dev=PanelDisplay.open_first()
                         applied=-1
                         next_status=0
                     with self.lock: c,version=dict(self.command),self.version
@@ -118,17 +115,17 @@ class Controller:
                         t0=now
                     if now>=next_status:
                         power=dev.power_info()
-                        if power is None: raise RuntimeError('键盘没有响应，请检查 USB 连接并退出其他键盘控制软件')
-                        self.update(connected=True,battery=power['percent'],error='')
+                        if power is None: raise RuntimeError('键盘没有响应，请检查键盘连接并退出其他键盘控制软件')
+                        self.update(connected=True,transport='2.4G' if dev.wireless else 'USB',battery=power['percent'],error='')
                         next_status=now+5
                     c['_codex']={**self.codex_state, 'age':self.codex_state['age']+max(0,now-(self.codex_next-.5))}
                     pixels=render(c,now-t0)
                     if c['mode']!='stop': dev.show(pixels)
                     self.update(mode=c['mode'],pixels=pixels,version=version,error='',theme=c['theme'],brightness=c['brightness'])
                     applied=version
-                    self.closed.wait(.10 if c['mode']!='stop' else .3)
+                    self.closed.wait((.20 if dev.wireless else .10) if c['mode']!='stop' else .3)
                 except Exception as exc:
-                    self.update(connected=False,error=str(exc))
+                    self.update(connected=False,transport=None,battery=None,error=str(exc))
                     if dev:
                         try: dev.close()
                         except Exception: pass
