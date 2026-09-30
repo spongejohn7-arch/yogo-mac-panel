@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+*.lock
+.DS_Store
+*.app/
+.env
+.env.*
+*.jsonl
+settings.json

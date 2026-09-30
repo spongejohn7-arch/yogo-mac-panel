@@ -1,0 +1,5 @@
+# rossgpt/yogo: MIT; fixed revision for reproducible device protocol behavior.
+yogo @ https://github.com/rossgpt/yogo/archive/ba646df545c4ae0c61623deebe4819d4626199cc.zip
+hid==1.0.9
+Pillow==12.3.0
+psutil==7.2.2
