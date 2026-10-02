@@ -12,7 +12,7 @@ from yogo.font import GLYPHS, lit_indices
 from yogo.daemon import RENDERERS, render_idle
 from codex_status import Follower
 from robot_theme import robot_frame
-from world_themes import world_frame
+from world_themes import world_frame, THEMES
 
 PORT = 18765
 ORIGIN = f'http://127.0.0.1:{PORT}'
@@ -29,7 +29,7 @@ def validate(data):
     if not math.isfinite(brightness) or not 0 <= brightness <= 1:
         raise ValueError('亮度应在 0–100% 之间')
     theme = data.get('theme', 'robot')
-    if theme not in ('robot', 'simple', 'garden', 'space'): raise ValueError('请选择有效的显示主题')
+    if theme not in ('robot', 'simple') and theme not in THEMES: raise ValueError('请选择有效的显示主题')
     color = data.get('color', '#3399ff')
     if not isinstance(color, str) or len(color)>30: raise ValueError('颜色无效')
     try: rgb = parse_color(color)
@@ -54,7 +54,7 @@ def render(c, elapsed):
         fn=RENDERERS.get(state['state'])
         age=elapsed if state['state']=='idle' else state['age']
         if c.get('theme','robot')=='robot': f=robot_frame(state['state'],age)
-        elif c['theme'] in ('garden','space'): f=world_frame(c['theme'],state['state'],age)
+        elif c['theme'] in THEMES: f=world_frame(c['theme'],state['state'],age)
         else: f=fn(age) if fn else render_idle(elapsed,'breathe')
     elif mode=='rainbow': f=Frame.rainbow((elapsed/5)%1)
     elif mode=='pixels': f=Frame.from_pixels(c['pixels'])

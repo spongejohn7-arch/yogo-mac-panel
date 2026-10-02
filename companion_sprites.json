@@ -1,0 +1,914 @@
+{
+  "palette": {
+    ".": "#000000",
+    "k": "#000000",
+    "g": "#6ae088",
+    "G": "#26965a",
+    "b": "#65d3f2",
+    "p": "#d498f7",
+    "P": "#a35bd1",
+    "w": "#eef5ff",
+    "y": "#ffdb63",
+    "a": "#ffb94f",
+    "r": "#fa6570",
+    "t": "#a67d60"
+  },
+  "themes": {
+    "monster": {
+      "idle": {
+        "note": "小角晃晃，眨眼打个盹",
+        "frames": [
+          [
+            "g..g..",
+            "ggggg.",
+            "gkgkg.",
+            "ggggg.",
+            "g...g.",
+            ".ggg.."
+          ],
+          [
+            ".g..g.",
+            ".ggggg",
+            ".gkgkg",
+            ".ggggg",
+            ".g...g",
+            "..ggg."
+          ],
+          [
+            ".g..g.",
+            ".ggggg",
+            ".ggggg",
+            ".ggggg",
+            ".g...g",
+            "..ggg."
+          ],
+          [
+            "g..g..",
+            "ggggg.",
+            "gkgkg.",
+            "ggggg.",
+            "g...g.",
+            ".ggg.."
+          ]
+        ]
+      },
+      "thinking": {
+        "note": "眼睛左看右看，琢磨下一步",
+        "frames": [
+          [
+            "g..g..",
+            "ggggg.",
+            "kgkgg.",
+            "ggggg.",
+            "g...g.",
+            ".ggg.."
+          ],
+          [
+            "g..g..",
+            "ggggg.",
+            "gkgkg.",
+            "ggggg.",
+            "g...g.",
+            ".ggg.."
+          ],
+          [
+            "g..g..",
+            "ggggg.",
+            "ggkgk.",
+            "ggggg.",
+            "g...g.",
+            ".ggg.."
+          ],
+          [
+            "g..g..",
+            "ggggg.",
+            "gkgkg.",
+            "ggggg.",
+            "g...g.",
+            ".ggg.."
+          ]
+        ]
+      },
+      "tool": {
+        "note": "张大嘴，一口口吃掉任务豆",
+        "frames": [
+          [
+            ".ggg..",
+            "ggkgg.",
+            "ggg...",
+            "gg...y",
+            "ggg...",
+            ".gggg."
+          ],
+          [
+            ".ggg..",
+            "ggkgg.",
+            "gggg..",
+            "gg..y.",
+            "gggg..",
+            ".gggg."
+          ],
+          [
+            ".ggg..",
+            "ggkgg.",
+            "ggggg.",
+            "gggy..",
+            "ggggg.",
+            ".gggg."
+          ],
+          [
+            ".ggg..",
+            "ggkgg.",
+            "ggggg.",
+            "ggggg.",
+            "ggggg.",
+            ".gggg."
+          ]
+        ]
+      },
+      "waiting": {
+        "note": "闭嘴等你，琥珀色小角轻闪",
+        "frames": [
+          [
+            "a..a..",
+            "ggggg.",
+            "gkgkg.",
+            "ggggg.",
+            ".ggg..",
+            "g...g."
+          ],
+          [
+            "g..g..",
+            "ggggg.",
+            "gkgkg.",
+            "ggggg.",
+            ".ggg..",
+            "g...g."
+          ],
+          [
+            ".aaa..",
+            "a...a.",
+            "...a..",
+            "..a...",
+            "......",
+            "..a..."
+          ],
+          [
+            "a..a..",
+            "ggggg.",
+            "gkgkg.",
+            "ggggg.",
+            ".ggg..",
+            "g...g."
+          ]
+        ]
+      },
+      "done": {
+        "note": "吃饱鼓起肚子，打个彩色小嗝",
+        "frames": [
+          [
+            "g..g..",
+            "ggggg.",
+            "gkgkg.",
+            "ggggg.",
+            "ggggg.",
+            ".ggg.."
+          ],
+          [
+            ".gggg.",
+            "gggggg",
+            "gkggkg",
+            "gggggg",
+            ".gggg.",
+            "..gg.."
+          ],
+          [
+            ".....p",
+            ".gggg.",
+            "gkggkg",
+            "ggggg.",
+            ".gggg.",
+            "..gg.."
+          ],
+          [
+            "....py",
+            ".gggg.",
+            "gkggkg",
+            "ggggg.",
+            ".gggg.",
+            "..gg.."
+          ]
+        ]
+      },
+      "error": {
+        "note": "噎住了，红色小豆吐出来",
+        "frames": [
+          [
+            ".ggg..",
+            "ggkgg.",
+            "gggg..",
+            "gg.r..",
+            "gggg..",
+            ".gggg."
+          ],
+          [
+            ".ggg..",
+            "ggkgg.",
+            "ggg...",
+            "gg..r.",
+            "ggg...",
+            ".gggg."
+          ],
+          [
+            ".ggg..",
+            "ggrgg.",
+            "ggg...",
+            "gg...r",
+            "ggg...",
+            ".gggg."
+          ],
+          [
+            ".ggg..",
+            "ggrgg.",
+            "gggg..",
+            "gg....",
+            "gggg..",
+            ".gggg."
+          ]
+        ]
+      }
+    },
+    "jelly": {
+      "idle": {
+        "note": "伞盖轻轻收缩，触须慢慢摇",
+        "frames": [
+          [
+            "..pp..",
+            ".pppp.",
+            "pppppp",
+            "pkppkp",
+            ".b.b..",
+            "b...b."
+          ],
+          [
+            "......",
+            "..pp..",
+            ".pppp.",
+            "pkppkp",
+            ".b.b..",
+            "..b.b."
+          ],
+          [
+            "......",
+            "..pp..",
+            ".pppp.",
+            "pkppkp",
+            "..b.b.",
+            ".b...b"
+          ],
+          [
+            "..pp..",
+            ".pppp.",
+            "pppppp",
+            "pkppkp",
+            "..b.b.",
+            ".b...b"
+          ]
+        ]
+      },
+      "thinking": {
+        "note": "触须摆动，向左向右探索",
+        "frames": [
+          [
+            "..pp..",
+            ".pppp.",
+            "pppppp",
+            "pkppkp",
+            ".b.b..",
+            "b...b."
+          ],
+          [
+            ".pp...",
+            "pppp..",
+            "ppppp.",
+            "kppkp.",
+            "b.b...",
+            ".b.b.."
+          ],
+          [
+            "..pp..",
+            ".pppp.",
+            "pppppp",
+            "pkppkp",
+            "..b.b.",
+            ".b...b"
+          ],
+          [
+            "...pp.",
+            "..pppp",
+            ".ppppp",
+            ".pkppk",
+            "..b.b.",
+            "...b.b"
+          ]
+        ]
+      },
+      "tool": {
+        "note": "伞盖加速收缩，冒出小泡泡",
+        "frames": [
+          [
+            "b.....",
+            "..pp..",
+            ".pppp.",
+            "pkppkp",
+            ".b.b..",
+            "b...b."
+          ],
+          [
+            "..pp..",
+            ".pppp.",
+            "pppppp",
+            "pkppkp",
+            "..b.b.",
+            ".b...b"
+          ],
+          [
+            ".....b",
+            "..pp..",
+            ".pppp.",
+            "pkppkp",
+            "..b.b.",
+            ".b...b"
+          ],
+          [
+            "..pp..",
+            ".pppp.",
+            "pppppp",
+            "pkppkp",
+            ".b.b..",
+            "b...b."
+          ]
+        ]
+      },
+      "waiting": {
+        "note": "停在原地，琥珀色触须招手",
+        "frames": [
+          [
+            "..pp..",
+            ".pppp.",
+            "pppppp",
+            "pkppkp",
+            ".a.a..",
+            "a...a."
+          ],
+          [
+            "..pp..",
+            ".pppp.",
+            "pppppp",
+            "pkppkp",
+            "a.a...",
+            "......"
+          ],
+          [
+            "..pp..",
+            ".pppp.",
+            "pppppp",
+            "pkppkp",
+            "..a.a.",
+            "......"
+          ],
+          [
+            "..pp..",
+            ".pppp.",
+            "pppppp",
+            "pkppkp",
+            ".a.a..",
+            "a...a."
+          ]
+        ]
+      },
+      "done": {
+        "note": "向上游一下，放出彩色泡泡",
+        "frames": [
+          [
+            "......",
+            "..pp..",
+            ".pppp.",
+            "pkppkp",
+            ".b.b..",
+            "b...b."
+          ],
+          [
+            "..pp..",
+            ".pppp.",
+            "pppppp",
+            "pkppkp",
+            "..b.b.",
+            ".b...b"
+          ],
+          [
+            ".pppp.",
+            "pppppp",
+            "pkppkp",
+            ".b.b..",
+            "b...b.",
+            "......"
+          ],
+          [
+            "y....b",
+            "..pp..",
+            ".pppp.",
+            "pkppkp",
+            "p.b.b.",
+            ".b...g"
+          ]
+        ]
+      },
+      "error": {
+        "note": "触须打结，红色警报轻闪",
+        "frames": [
+          [
+            "..pp..",
+            ".pppp.",
+            "pppppp",
+            "prpprp",
+            "..rr..",
+            ".r..r."
+          ],
+          [
+            "..pp..",
+            ".pppp.",
+            "pppppp",
+            "pkppkp",
+            ".r..r.",
+            "..rr.."
+          ],
+          [
+            "..pp..",
+            ".pppp.",
+            "pppppp",
+            "prpprp",
+            "..rr..",
+            ".r..r."
+          ],
+          [
+            "..pp..",
+            ".pppp.",
+            "pppppp",
+            "prpprp",
+            ".r..r.",
+            "..rr.."
+          ]
+        ]
+      }
+    },
+    "ghost": {
+      "idle": {
+        "note": "轻轻飘浮，裙摆一左一右",
+        "frames": [
+          [
+            "..ww..",
+            ".wwww.",
+            "wkwwkw",
+            "wwwwww",
+            ".wwww.",
+            "w.ww.w"
+          ],
+          [
+            "......",
+            "..ww..",
+            ".wwww.",
+            "wkwwkw",
+            "wwwwww",
+            ".w..w."
+          ],
+          [
+            "......",
+            "..ww..",
+            ".wwww.",
+            "wkwwkw",
+            "wwwwww",
+            "w.ww.w"
+          ],
+          [
+            "..ww..",
+            ".wwww.",
+            "wkwwkw",
+            "wwwwww",
+            ".wwww.",
+            ".w..w."
+          ]
+        ]
+      },
+      "thinking": {
+        "note": "眼睛来回看，想法藏在脑袋里",
+        "frames": [
+          [
+            "..ww..",
+            ".wwww.",
+            "kwwkww",
+            "wwwwww",
+            ".wwww.",
+            "w.ww.w"
+          ],
+          [
+            "..ww..",
+            ".wwww.",
+            "wkwwkw",
+            "wwwwww",
+            ".wwww.",
+            ".w..w."
+          ],
+          [
+            "..ww..",
+            ".wwww.",
+            "wwkwwk",
+            "wwwwww",
+            ".wwww.",
+            "w.ww.w"
+          ],
+          [
+            "..ww..",
+            ".wwww.",
+            "wkwwkw",
+            "wwwwww",
+            ".wwww.",
+            ".w..w."
+          ]
+        ]
+      },
+      "tool": {
+        "note": "变成小旋风，忙着搬运光点",
+        "frames": [
+          [
+            "b.....",
+            "..ww..",
+            ".wwww.",
+            "wkwwkw",
+            ".wwww.",
+            "w.ww.w"
+          ],
+          [
+            "..ww.b",
+            ".wwww.",
+            "wkwwkw",
+            "wwwwww",
+            ".wwww.",
+            ".w..w."
+          ],
+          [
+            "......",
+            "..ww..",
+            ".wwww.",
+            "wkwwkw",
+            ".wwww.",
+            "w.ww.w"
+          ],
+          [
+            "..ww..",
+            ".wwww.",
+            "wkwwkw",
+            "wwwwww",
+            ".wwww.",
+            "bw..w."
+          ]
+        ]
+      },
+      "waiting": {
+        "note": "停住看着你，举起琥珀色小手",
+        "frames": [
+          [
+            "..ww..",
+            ".wwww.",
+            "wkwwkw",
+            "wwwwwa",
+            ".wwww.",
+            ".w..w."
+          ],
+          [
+            "..ww..",
+            ".wwww.",
+            "wkwwka",
+            "wwwww.",
+            ".wwww.",
+            ".w..w."
+          ],
+          [
+            ".aaa..",
+            "a...a.",
+            "...a..",
+            "..a...",
+            "......",
+            "..a..."
+          ],
+          [
+            "..ww..",
+            ".wwww.",
+            "wkwwka",
+            "wwwww.",
+            ".wwww.",
+            ".w..w."
+          ]
+        ]
+      },
+      "done": {
+        "note": "开心地张开双手，变出小爱心",
+        "frames": [
+          [
+            "..ww..",
+            ".wwww.",
+            "wkwwkw",
+            "wwwwww",
+            ".wwww.",
+            ".w..w."
+          ],
+          [
+            "..ww..",
+            "wwwwww",
+            "wkwwkw",
+            "wwwwww",
+            ".wwww.",
+            "w....w"
+          ],
+          [
+            ".p..p.",
+            "pppppp",
+            "pppppp",
+            ".pppp.",
+            "..pp..",
+            "......"
+          ],
+          [
+            "p.ww.p",
+            ".wwww.",
+            "wkwwkw",
+            "wwwwww",
+            ".wwww.",
+            "w....w"
+          ]
+        ]
+      },
+      "error": {
+        "note": "吓得一抖，脸颊亮起红光",
+        "frames": [
+          [
+            "..ww..",
+            ".wwww.",
+            "wkwwkw",
+            "rwwwwr",
+            ".wkkw.",
+            "w.ww.w"
+          ],
+          [
+            ".ww...",
+            "wwww..",
+            "kwkw..",
+            "rwwwr.",
+            "wkkw..",
+            "w.w..."
+          ],
+          [
+            "...ww.",
+            "..wwww",
+            "..kwkw",
+            ".rwwwr",
+            "..wkkw",
+            "...w.w"
+          ],
+          [
+            "..ww..",
+            ".wwww.",
+            "wkwwkw",
+            "rwwwwr",
+            ".wkkw.",
+            ".w..w."
+          ]
+        ]
+      }
+    },
+    "gardener": {
+      "idle": {
+        "note": "天线长着嫩芽，眨眼守着花园",
+        "frames": [
+          [
+            "..g...",
+            ".bbbb.",
+            "bwbbwb",
+            ".bbbb.",
+            "..bb..",
+            ".b..b."
+          ],
+          [
+            "...g..",
+            ".bbbb.",
+            "bwbbwb",
+            ".bbbb.",
+            "..bb..",
+            ".b..b."
+          ],
+          [
+            "...g..",
+            ".bbbb.",
+            "bbbbbb",
+            ".bbbb.",
+            "..bb..",
+            ".b..b."
+          ],
+          [
+            "..g...",
+            ".bbbb.",
+            "bwbbwb",
+            ".bbbb.",
+            "..bb..",
+            ".b..b."
+          ]
+        ]
+      },
+      "thinking": {
+        "note": "看看幼苗，再转转小脑袋",
+        "frames": [
+          [
+            "..g...",
+            ".bbbb.",
+            "bwbbwb",
+            ".bbbb.",
+            "..bb..",
+            ".b..b."
+          ],
+          [
+            "..g...",
+            ".bbbb.",
+            "wbbwbb",
+            ".bbbb.",
+            "..bb..",
+            ".b..b."
+          ],
+          [
+            "......",
+            ".g.g..",
+            "..G...",
+            "..G...",
+            ".tttt.",
+            "..tt.."
+          ],
+          [
+            "..g...",
+            ".bbbb.",
+            "bbwbbw",
+            ".bbbb.",
+            "..bb..",
+            ".b..b."
+          ]
+        ]
+      },
+      "tool": {
+        "note": "伸出小手，给幼苗浇水",
+        "frames": [
+          [
+            "..g...",
+            ".bbbb.",
+            "bwbbwb",
+            ".bbbbb",
+            "..bb.b",
+            ".b..b."
+          ],
+          [
+            ".b..b.",
+            "...b..",
+            ".g.g..",
+            "..G...",
+            ".tttt.",
+            "..tt.."
+          ],
+          [
+            "......",
+            ".b..b.",
+            ".g.g..",
+            "..G...",
+            ".tttt.",
+            "..tt.."
+          ],
+          [
+            "..g...",
+            ".bbbb.",
+            "bwbbwb",
+            ".bbbbb",
+            "..bb.b",
+            ".b..b."
+          ]
+        ]
+      },
+      "waiting": {
+        "note": "天线变琥珀色，举手等你决定",
+        "frames": [
+          [
+            "..a...",
+            ".bbbb.",
+            "bwbbwb",
+            ".bbbbb",
+            "..bb.b",
+            ".b..b."
+          ],
+          [
+            "..a..b",
+            ".bbbbb",
+            "bwbbwb",
+            ".bbbb.",
+            "..bb..",
+            ".b..b."
+          ],
+          [
+            ".aaa..",
+            "a...a.",
+            "...a..",
+            "..a...",
+            "......",
+            "..a..."
+          ],
+          [
+            "..a..b",
+            ".bbbbb",
+            "bwbbwb",
+            ".bbbb.",
+            "..bb..",
+            ".b..b."
+          ]
+        ]
+      },
+      "done": {
+        "note": "花朵盛开，园丁亮出爱心",
+        "frames": [
+          [
+            "......",
+            "..pp..",
+            "..yy..",
+            "..G...",
+            ".tttt.",
+            "..tt.."
+          ],
+          [
+            "..pp..",
+            ".pyyp.",
+            ".pyyp.",
+            "..pp..",
+            ".gGg..",
+            "..tt.."
+          ],
+          [
+            "..g...",
+            ".bbbb.",
+            "bwbbwb",
+            ".bppb.",
+            "..pp..",
+            ".b..b."
+          ],
+          [
+            ".p..p.",
+            "pppppp",
+            "pppppp",
+            ".pppp.",
+            "..pp..",
+            "......"
+          ]
+        ]
+      },
+      "error": {
+        "note": "天线亮红，低头检查小苗",
+        "frames": [
+          [
+            "..r...",
+            ".bbbb.",
+            "brbbrb",
+            ".bbbb.",
+            "..bb..",
+            ".b..b."
+          ],
+          [
+            "......",
+            "..r...",
+            ".bbbb.",
+            "brbbrb",
+            ".bbbb.",
+            ".b..b."
+          ],
+          [
+            "......",
+            "...rr.",
+            "...G..",
+            "..G...",
+            ".tttt.",
+            "..tt.."
+          ],
+          [
+            "..r...",
+            ".bbbb.",
+            "brbbrb",
+            ".bbbb.",
+            "..bb..",
+            ".b..b."
+          ]
+        ]
+      }
+    }
+  }
+}
